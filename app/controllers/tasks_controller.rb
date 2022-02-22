@@ -4,6 +4,10 @@ class TasksController < ApplicationController
     @task = Task.new
   end
 
+  def show
+    @tasks = Task.all
+  end
+  
   def create
     @task = Task.new(params["task"])
     @task.save
